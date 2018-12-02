@@ -1,11 +1,15 @@
 {
-  "name": "More Cars: Multimedia Collector",
-  "version": "0.1",
+  "name": "More Cars - Multimedia Collector",
+  "version": "0.3",
   "description": "A little helper that makes it easier to add car related videos, images and articles to the 'More Cars' database. (more-cars.net)",
   "homepage_url": "https://github.com/dgerike/more-cars-multimedia-collector",
-  "permissions": ["activeTab"],
+  "permissions": [
+    "activeTab"
+  ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": false
   },
   "browser_action": {},
