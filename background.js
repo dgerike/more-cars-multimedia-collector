@@ -1,6 +1,6 @@
 'use strict';
 
-var availableServices = [
+var multimediaServices = [
     {
         "name": "flickr",
         "selector": "flickr.com",
@@ -10,7 +10,7 @@ var availableServices = [
         "selector": "wikimedia.org/wiki/File:",
         "url": "https://more-cars.net/image/create?image_platform=wikimedia&image_id=",
     }, {
-        "name": "wikimedia",
+        "name": "wikipedia",
         "selector": "wikipedia.org/wiki/File:",
         "url": "https://more-cars.net/image/create?image_platform=wikimedia&image_id=",
     }, {
@@ -22,7 +22,7 @@ var availableServices = [
 
 var articleServices = [{
     "name": "evo",
-    "domain": "www.evo.co.uk",
+    "domain": "evo.co.uk",
     "selectors": {
         "title": "#page-title",
         "summary": "h2.short-teaser",
@@ -57,7 +57,8 @@ chrome.runtime.onMessage.addListener(function (response, sender) {
 chrome.browserAction.onClicked.addListener(function () {
     chrome.tabs.getSelected(function (tab) {
         var currenUrl = tab.url;
-        availableServices.forEach(function (service) {
+
+        multimediaServices.forEach(function (service) {
             if (currenUrl.includes(service.selector)) {
                 var targetUrl = service.url + tab.url;
                 chrome.tabs.create({url: targetUrl});
