@@ -2,7 +2,10 @@ chrome.runtime.onMessage.addListener(
     function (request) {
         if (request.message === "add_media_item_request") {
             var title = document.querySelector(request.selectors.title).textContent;
-            var summary = document.querySelector(request.selectors.summary).textContent;
+            var summary = document.querySelector(request.selectors.summary);
+            if (summary) {
+                summary = summary.textContent;
+            }
             var author = document.querySelector(request.selectors.author).textContent;
             var theDate = document.querySelector(request.selectors.date).textContent;
 
