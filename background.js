@@ -33,9 +33,18 @@ var articleServices = [{
 
 chrome.runtime.onMessage.addListener(function (response, sender) {
     if (response.message === "add_media_item_response") {
-        console.log(response);
+
+        var url = sender.url;
+
+        // remove potential hash within the url
+        var hashLocation = url.indexOf('#');
+        if (hashLocation > 0) {
+            url = url.substr(0, hashLocation);
+        }
+
+        // build url for adding the article to the More Cars database
         var targetUrl = "https://more-cars.net/onlinearticle/create?" +
-            "url=" + sender.url + "&" +
+            "url=" + url + "&" +
             "name=" + response.title + "&" +
             "description=" + response.summary + "&" +
             "publish_date=" + response.date + "&" +
