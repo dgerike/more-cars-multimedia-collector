@@ -29,6 +29,15 @@ var articleServices = [{
         "date": ".date-display-single",
         "author": "#block-system-main > div > div > div.content > div.field-group-format.group_meta.group-meta > span > span"
     }
+}, {
+    "name": "topgear",
+    "domain": "topgear.com",
+    "selectors": {
+        "title": "h1",
+        "summary": ".standfirst",
+        "date": ".post-info__date",
+        "author": ".post-info__author a"
+    }
 }];
 
 chrome.runtime.onMessage.addListener(function (response, sender) {
@@ -69,7 +78,10 @@ chrome.browserAction.onClicked.addListener(function () {
             if (currenUrl.includes(service.domain)) {
                 chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
                     var activeTab = tabs[0];
-                    chrome.tabs.sendMessage(activeTab.id, {"message": "add_media_item_request", "selectors": service.selectors});
+                    chrome.tabs.sendMessage(activeTab.id, {
+                        "message": "add_media_item_request",
+                        "selectors": service.selectors
+                    });
                 });
             }
         });
