@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="libs/bootstrap.css">
+    <script src="libs/jquery_v3.4.1.js"></script>
+    <script src="libs/bootstrap.js"></script>
+</head>
+<body style="width:450px">
+<div class="container my-3">
+    <div class="card mb-3">
+        <div class="card-header">
+            ➕ Add media element to More Cars
+        </div>
+        <div class="card-body">
+            <p id="noMediaElementFound">
+                No supported media elements found on this page.
+            </p>
+            <p id="mediaElementFound">
+                We detected a media element from
+                <code id="mediaElementPlatform"></code>
+                on this page.
+                The following information will be transmitted to »More Cars« when you hit the "Add" button.
+            </p>
+            <ul class="list-group mb-3" id="mediaElementDetails"></ul>
+            <button id="addItem" class="btn btn-danger">
+                Add this
+                <span id="mediaElementType"></span>
+                to More Cars
+            </button>
+
+            <p id="errorMessage" class="alert alert-danger mt-3 mb-0"></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            🔒 Access token
+        </div>
+        <div class="card-body">
+            <p>
+                In order to interact with the »More Cars« database you need permissions.
+                <br><br>
+                1. Join More Cars <a href="https://more-cars.net/join">more-cars.net/join</a>
+                <br>
+                2. Go to the garage <a href="https://more-cars.net/home">more-cars.net/home</a>
+                <br>
+                3. Create an access token
+                <br>
+                4. Copy the access token
+                <br>
+                5. Paste it here:
+            </p>
+            <div class="form-group">
+                <input id="accessTokenInput" placeholder="Your Access Token" class="form-control">
+            </div>
+            <button id="saveAccessToken" class="btn btn-warning">Save Access Token</button>
+        </div>
+    </div>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
