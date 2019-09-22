@@ -35,6 +35,16 @@ const multimediaServices = [
             "date": ".post-info__date",
             "author": ".post-info__author a"
         }
+    }, {
+        "name": "road_and_track",
+        "type": "online article",
+        "url_pattern": "roadandtrack.com/new-cars",
+        "selectors": {
+            "title": "header h1",
+            "summary": "header h1 + div p",
+            "date": "header .content-info-date",
+            "author": "header .byline-name"
+        }
     }
 ];
 
