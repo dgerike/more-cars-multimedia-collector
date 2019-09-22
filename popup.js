@@ -39,8 +39,11 @@ const multimediaServices = [
 ];
 
 window.onload = function () {
-    chrome.tabs.getSelected(function (tab) {
-        const currentUrl = tab.url;
+    chrome.tabs.query({
+        active: true,
+        lastFocusedWindow: true
+    }, function (tabs) {
+        const currentUrl = tabs[0].url;
 
         $('#noMediaElementFound').show();
         $('#mediaElementFound').hide();
@@ -130,7 +133,7 @@ chrome.storage.local.get(['accessToken'], function (storage) {
 });
 
 let saveAccessTokenBtn = document.getElementById('saveAccessToken');
-saveAccessTokenBtn.onclick = function (element) {
+saveAccessTokenBtn.onclick = function () {
     let newAccessToken = document.getElementById('accessTokenInput').value;
 
     chrome.storage.local.set({'accessToken': newAccessToken}, function () {
@@ -138,9 +141,12 @@ saveAccessTokenBtn.onclick = function (element) {
 };
 
 let addItemBtn = document.getElementById('addItem');
-addItemBtn.onclick = function (element) {
-    chrome.tabs.getSelected(function (tab) {
-        const currentUrl = tab.url;
+addItemBtn.onclick = function () {
+    chrome.tabs.query({
+        active: true,
+        lastFocusedWindow: true
+    }, function (tabs) {
+        const currentUrl = tabs[0].url;
 
         multimediaServices.forEach(function (service) {
             if (currentUrl.includes(service.url_pattern)) {
@@ -215,7 +221,7 @@ function addOnlineArticle(service) {
     });
 
     chrome.runtime.onMessage.addListener(function (response, sender) {
-        chrome.storage.local.get(['accessToken'], function (storage) {
+        chrome.storage.local.get(['accessToken'], function () {
             if (response.message === "collect-media-item-data_RESPONSE") {
                 let url = sender.url;
 
