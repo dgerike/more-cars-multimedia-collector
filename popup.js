@@ -20,10 +20,10 @@ const multimediaServices = [
         "type": "online article",
         "url_pattern": "evo.co.uk/",
         "selectors": {
-            "title": "#page-title",
-            "summary": "h2.short-teaser",
-            "date": ".date-display-single",
-            "author": "#block-system-main > div > div > div.content > div.field-group-format.group_meta.group-meta > span > span"
+            "title": "main h1",
+            "summary": "main h2",
+            "date": "main .polaris__post-meta--date span",
+            "author": "main .polaris__post-meta--author a"
         }
     }, {
         "name": "topgear",
