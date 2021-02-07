@@ -13,6 +13,7 @@
     "https://www.roadandtrack.com/*",
     "https://www.adac.de/*",
     "https://www.autobild.de/*",
+    "https://www.carmagazine.co.uk/*",
     "https://more-cars.net/api/v1/*"
   ],
   "content_scripts": [
@@ -25,7 +26,8 @@
         "https://www.evo.co.uk/*",
         "https://www.roadandtrack.com/*",
         "https://www.adac.de/*",
-        "https://www.autobild.de/*"
+        "https://www.autobild.de/*",
+        "https://www.carmagazine.co.uk/*"
       ],
       "js": [
         "content.js"

@@ -77,6 +77,16 @@ const multimediaServices = [
             "date_property": "datetime",
             "author": ".author a"
         }
+    }, {
+        "name": "car magazine",
+        "type": "online article",
+        "url_pattern": "carmagazine.co.uk/",
+        "selectors": {
+            "title": "header h1",
+            "summary": "abc",
+            "date": "header .date",
+            "author": ".author-name a"
+        }
     }
 ];
 
