@@ -87,6 +87,16 @@ const multimediaServices = [
             "date": "header .date",
             "author": ".author-name a"
         }
+    }, {
+        "name": "auto motor sport",
+        "type": "online article",
+        "url_pattern": "auto-motor-und-sport.de/",
+        "selectors": {
+            "title": "h2 span:last-child",
+            "summary": ".v-A_-lead",
+            "date": ".v-A_-article__info .v-A_-article__info-item:last-child",
+            "author": ".v-A_-article__author"
+        }
     }
 ];
 
