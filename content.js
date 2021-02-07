@@ -10,10 +10,16 @@ chrome.runtime.onMessage.addListener(
             if (author) {
                 author = author.textContent;
             }
-            let theDate = document.querySelector(request.selectors.date);
+
+            let theDate = null;
+            if (request.selectors.date_property) {
+                theDate = document.querySelector(request.selectors.date).getAttribute(request.selectors.date_property);
+            } else {
+                theDate = document.querySelector(request.selectors.date);
+                theDate = theDate.textContent;
+            }
             let formattedDate = null;
             if (theDate) {
-                theDate = theDate.textContent;
                 let unixTimestamp = Date.parse(theDate + ' GMT');
                 let date = new Date(unixTimestamp);
                 formattedDate = date.toISOString().slice(0, 10);
