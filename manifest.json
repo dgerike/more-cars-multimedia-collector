@@ -11,6 +11,7 @@
     "https://www.topgear.com/*",
     "https://www.evo.co.uk/*",
     "https://www.roadandtrack.com/*",
+    "https://www.adac.de/*",
     "https://more-cars.net/api/v1/*"
   ],
   "content_scripts": [
@@ -21,7 +22,8 @@
         "https://commons.wikimedia.org/*",
         "https://www.topgear.com/*",
         "https://www.evo.co.uk/*",
-        "https://www.roadandtrack.com/*"
+        "https://www.roadandtrack.com/*",
+        "https://www.adac.de/*"
       ],
       "js": [
         "content.js"

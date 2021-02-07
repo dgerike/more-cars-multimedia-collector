@@ -55,6 +55,17 @@ const multimediaServices = [
             "date": "header .content-info-date",
             "author": "header .byline-name"
         }
+    }, {
+        "name": "adac",
+        "type": "online article",
+        "url_pattern": "adac.de/",
+        "selectors": {
+            "title": "h1",
+            "summary": "article p b",
+            "date": "article header time",
+            "date_property": "datetime",
+            "author": "footer div div div div"
+        }
     }
 ];
 
