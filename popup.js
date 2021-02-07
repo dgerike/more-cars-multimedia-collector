@@ -66,6 +66,17 @@ const multimediaServices = [
             "date_property": "datetime",
             "author": "footer div div div div"
         }
+    }, {
+        "name": "auto bild",
+        "type": "online article",
+        "url_pattern": "autobild.de/",
+        "selectors": {
+            "title": "h2",
+            "summary": ".intro",
+            "date": ".article time",
+            "date_property": "datetime",
+            "author": ".author a"
+        }
     }
 ];
 

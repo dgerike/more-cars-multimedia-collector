@@ -12,6 +12,7 @@
     "https://www.evo.co.uk/*",
     "https://www.roadandtrack.com/*",
     "https://www.adac.de/*",
+    "https://www.autobild.de/*",
     "https://more-cars.net/api/v1/*"
   ],
   "content_scripts": [
@@ -23,7 +24,8 @@
         "https://www.topgear.com/*",
         "https://www.evo.co.uk/*",
         "https://www.roadandtrack.com/*",
-        "https://www.adac.de/*"
+        "https://www.adac.de/*",
+        "https://www.autobild.de/*"
       ],
       "js": [
         "content.js"
