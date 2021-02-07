@@ -38,7 +38,7 @@ const multimediaServices = [
     }, {
         "name": "road_and_track",
         "type": "online article",
-        "url_pattern": "roadandtrack.com/new-cars",
+        "url_pattern": "roadandtrack.com/",
         "selectors": {
             "title": "header h1",
             "summary": "header h1 + div p",
