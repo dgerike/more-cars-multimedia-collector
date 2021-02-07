@@ -26,12 +26,22 @@ const multimediaServices = [
             "author": "main .polaris__post-meta--author a"
         }
     }, {
-        "name": "topgear",
+        "name": "topgear news",
         "type": "online article",
         "url_pattern": "topgear.com/car-news",
         "selectors": {
             "title": "h1",
             "summary": ".standfirst",
+            "date": ".post-info__date",
+            "author": ".post-info__author a"
+        }
+    }, {
+        "name": "topgear reviews",
+        "type": "online article",
+        "url_pattern": "topgear.com/car-reviews",
+        "selectors": {
+            "title": "h1",
+            "summary": ".price-verdict__summary--car-reviews",
             "date": ".post-info__date",
             "author": ".post-info__author a"
         }
