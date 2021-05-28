@@ -16,6 +16,16 @@ const multimediaServices = [
         "type": "video",
         "url_pattern": "youtube.com/watch?v=",
     }, {
+        "name": "autocar",
+        "type": "online article",
+        "url_pattern": "autocar.co.uk/",
+        "selectors": {
+            "title": "h1",
+            "summary": ".views-field-field-intro-pull-quote-value",
+            "date": ".block-nodepublished-at",
+            "author": ".personality-info span"
+        }
+    }, {
         "name": "evo",
         "type": "online article",
         "url_pattern": "evo.co.uk/",
