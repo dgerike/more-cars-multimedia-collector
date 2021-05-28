@@ -5,31 +5,31 @@
   "homepage_url": "https://github.com/dgerike/more-cars-multimedia-collector",
   "permissions": [
     "storage",
-    "https://www.youtube.com/*",
-    "https://www.flickr.com/*",
     "https://commons.wikimedia.org/*",
-    "https://www.topgear.com/*",
-    "https://www.evo.co.uk/*",
-    "https://www.roadandtrack.com/*",
     "https://www.adac.de/*",
+    "https://www.auto-motor-und-sport.de/*",
     "https://www.autobild.de/*",
     "https://www.carmagazine.co.uk/*",
-    "https://www.auto-motor-und-sport.de/*",
+    "https://www.evo.co.uk/*",
+    "https://www.flickr.com/*",
+    "https://www.roadandtrack.com/*",
+    "https://www.topgear.com/*",
+    "https://www.youtube.com/*",
     "https://more-cars.net/api/v1/*"
   ],
   "content_scripts": [
     {
       "matches": [
-        "https://www.youtube.com/*",
-        "https://www.flickr.com/*",
         "https://commons.wikimedia.org/*",
-        "https://www.topgear.com/*",
-        "https://www.evo.co.uk/*",
-        "https://www.roadandtrack.com/*",
         "https://www.adac.de/*",
+        "https://www.auto-motor-und-sport.de/*",
         "https://www.autobild.de/*",
         "https://www.carmagazine.co.uk/*",
-        "https://www.auto-motor-und-sport.de/*"
+        "https://www.evo.co.uk/*",
+        "https://www.flickr.com/*",
+        "https://www.roadandtrack.com/*",
+        "https://www.topgear.com/*",
+        "https://www.youtube.com/*"
       ],
       "js": [
         "content.js"
