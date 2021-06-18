@@ -26,6 +26,16 @@ const multimediaServices = [
             "author": ".personality-info span"
         }
     }, {
+        "name": "classic driver",
+        "type": "online article",
+        "url_pattern": "classicdriver.com/",
+        "selectors": {
+            "title": "h1",
+            "summary": ".pane-node-field-article-lead",
+            "date": "time",
+            "author": ".author_name a"
+        }
+    }, {
         "name": "evo",
         "type": "online article",
         "url_pattern": "evo.co.uk/",
