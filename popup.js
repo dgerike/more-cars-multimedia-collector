@@ -61,9 +61,9 @@ const multimediaServices = [
         "url_pattern": "topgear.com/car-news",
         "selectors": {
             "title": "h1",
-            "summary": ".standfirst",
-            "date": ".post-info__date",
-            "author": ".post-info__author a"
+            "summary": "h1 + p",
+            "date": "[data-testid=\"Authored\"] [data-testid=\"Brevier\"]",
+            "author": "[data-testid=\"Authored\"] [data-testid=\"Pica\"] a"
         }
     }, {
         "name": "topgear reviews",
@@ -71,9 +71,9 @@ const multimediaServices = [
         "url_pattern": "topgear.com/car-reviews",
         "selectors": {
             "title": "h1",
-            "summary": ".price-verdict__summary--car-reviews",
-            "date": ".post-info__date",
-            "author": ".post-info__author a"
+            "summary": "[data-testid=\"DoublePica\"]",
+            "date": "[data-testid=\"Authored\"] [data-testid=\"Brevier\"]",
+            "author": "[data-testid=\"Authored\"] [data-testid=\"Pica\"] a"
         }
     }, {
         "name": "road_and_track",
