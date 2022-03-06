@@ -40,7 +40,7 @@ const multimediaServices = [
         "type": "online article",
         "url_pattern": "classicdriver.com/",
         "selectors": {
-            "title": "h1",
+            "title": "h1:not(.title)",
             "summary": ".pane-node-field-article-lead",
             "date": "time",
             "author": ".author_name a"
