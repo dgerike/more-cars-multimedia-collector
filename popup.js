@@ -16,14 +16,24 @@ const multimediaServices = [
         "type": "video",
         "url_pattern": "youtube.com/watch?v=",
     }, {
+        "name": "autocar (reviews)",
+        "type": "online article",
+        "url_pattern": "autocar.co.uk/car-review",
+        "selectors": {
+            "title": "h1",
+            "summary": ".views-field-field-intro-pull-quote-value",
+            "date": ".block-nodepublished-at",
+            "author": ".personality-info span"
+        }
+    }, {
         "name": "autocar",
         "type": "online article",
         "url_pattern": "autocar.co.uk/",
         "selectors": {
             "title": "h1",
             "summary": ".views-field-field-intro-pull-quote-value",
-            "date": ".block-nodepublished-at",
-            "author": ".personality-info span"
+            "date": ".personality-date",
+            "author": ".personality-author span"
         }
     }, {
         "name": "classic driver",
