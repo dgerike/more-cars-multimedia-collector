@@ -101,11 +101,11 @@ const multimediaServices = [
         "type": "online article",
         "url_pattern": "autobild.de/",
         "selectors": {
-            "title": "h2",
-            "summary": ".intro",
-            "date": ".article time",
+            "title": "h1",
+            "summary": "h2",
+            "date": "section time",
             "date_property": "datetime",
-            "author": ".author a"
+            "author": ".authorList__name"
         }
     }, {
         "name": "car magazine",
