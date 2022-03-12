@@ -82,8 +82,8 @@ const multimediaServices = [
         "selectors": {
             "title": "header h1",
             "summary": "header h1 + div p",
-            "date": "header .content-info-date",
-            "author": "header .byline-name"
+            "date": ".content-info-date",
+            "author": ".byline-name"
         }
     }, {
         "name": "adac",
